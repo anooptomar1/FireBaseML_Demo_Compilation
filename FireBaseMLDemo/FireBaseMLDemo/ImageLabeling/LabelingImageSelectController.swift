@@ -10,7 +10,7 @@ import UIKit
 
 class LabelingImageSelectController: UIViewController {
 
-    fileprivate var imageServiceRequest:[String] = ["Im" , "image" ,"1" , "2" , "3" , "4"]
+    fileprivate var imageServiceRequest:[String] = ["hat", "cat" , "hat2","lion" ,"hat3","sad" ,"hat4", "shoe" , "hat5","smile" ,"hat6", "wheel" ,"hat7"]
     var delegate:ImageSelectionProtocal?
     
     override func viewDidLoad() {
