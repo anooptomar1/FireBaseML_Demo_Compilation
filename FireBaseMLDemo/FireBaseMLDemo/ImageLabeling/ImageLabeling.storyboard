@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Labeling Controller-->
+        <scene sceneID="101-80-KeR">
+            <objects>
+                <viewController storyboardIdentifier="ImageLabelingController" id="Z5g-0Z-Cl6" customClass="ImageLabelingController" customModule="FireBaseMLDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nxf-Vl-nsT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8M-HF-0Pb">
+                                <rect key="frame" x="143" y="66" width="89" height="30"/>
+                                <state key="normal" title="Select Image">
+                                    <color key="titleColor" red="1" green="0.58606231600000003" blue="0.50395138019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageAction:" destination="Z5g-0Z-Cl6" eventType="touchUpInside" id="dIr-Ku-QEd"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1iu-W4-SpO">
+                                <rect key="frame" x="16" y="20" width="343" height="195"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="HrX-HU-yxK"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jfo-v4-m5Z" appends="YES" id="6L9-HL-lIf"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHF-pK-zE9">
+                                <rect key="frame" x="16" y="223" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.58606231600000003" blue="0.50395138019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jqw-SA-Ycd"/>
+                                </constraints>
+                                <state key="normal" title="Detect Image labeling">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="detectImageLabel:" destination="Z5g-0Z-Cl6" eventType="touchUpInside" id="FHK-k9-gRS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCl-za-Ujk">
+                                <rect key="frame" x="16" y="261" width="343" height="386"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.58606231600000003" blue="0.50395138019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T8M-HF-0Pb" firstAttribute="top" secondItem="CqL-bn-0ck" secondAttribute="top" constant="46" id="01s-8p-eWU"/>
+                            <constraint firstItem="CHF-pK-zE9" firstAttribute="leading" secondItem="CqL-bn-0ck" secondAttribute="leading" constant="16" id="20e-Fw-Ay4"/>
+                            <constraint firstItem="CqL-bn-0ck" firstAttribute="bottom" secondItem="eCl-za-Ujk" secondAttribute="bottom" constant="20" id="3T1-N5-753"/>
+                            <constraint firstItem="eCl-za-Ujk" firstAttribute="leading" secondItem="CqL-bn-0ck" secondAttribute="leading" constant="16" id="6vH-UZ-1KA"/>
+                            <constraint firstItem="1iu-W4-SpO" firstAttribute="top" secondItem="CqL-bn-0ck" secondAttribute="top" id="9QS-fh-mpx"/>
+                            <constraint firstItem="1iu-W4-SpO" firstAttribute="leading" secondItem="CqL-bn-0ck" secondAttribute="leading" constant="16" id="E4D-Pf-rb3"/>
+                            <constraint firstItem="CqL-bn-0ck" firstAttribute="trailing" secondItem="1iu-W4-SpO" secondAttribute="trailing" constant="16" id="P7i-f2-XpI"/>
+                            <constraint firstItem="CHF-pK-zE9" firstAttribute="top" secondItem="1iu-W4-SpO" secondAttribute="bottom" constant="8" id="Y41-ah-tSY"/>
+                            <constraint firstItem="eCl-za-Ujk" firstAttribute="top" secondItem="CHF-pK-zE9" secondAttribute="bottom" constant="8" id="aTE-Za-pvD"/>
+                            <constraint firstItem="T8M-HF-0Pb" firstAttribute="centerX" secondItem="nxf-Vl-nsT" secondAttribute="centerX" id="ezj-JD-vfl"/>
+                            <constraint firstItem="CqL-bn-0ck" firstAttribute="trailing" secondItem="eCl-za-Ujk" secondAttribute="trailing" constant="16" id="gLs-KY-frF"/>
+                            <constraint firstItem="CqL-bn-0ck" firstAttribute="trailing" secondItem="CHF-pK-zE9" secondAttribute="trailing" constant="16" id="nQk-DH-tY0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CqL-bn-0ck"/>
+                    </view>
+                    <connections>
+                        <outlet property="detectImageButton" destination="CHF-pK-zE9" id="hgx-4b-9ZL"/>
+                        <outlet property="imageHolderView" destination="1iu-W4-SpO" id="X5D-Ko-aH6"/>
+                        <outlet property="imageSelectionButton" destination="T8M-HF-0Pb" id="2LW-5m-XQK"/>
+                        <outlet property="resultLabel" destination="eCl-za-Ujk" id="IG8-FX-cKs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="toJ-3j-3i3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jfo-v4-m5Z">
+                    <connections>
+                        <action selector="imageSelectionAction:" destination="Z5g-0Z-Cl6" id="ddn-3G-x2m"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="176.80000000000001" y="-36.431784107946029"/>
+        </scene>
+        <!--Labeling Image Select Controller-->
+        <scene sceneID="fRF-PX-rbb">
+            <objects>
+                <viewController storyboardIdentifier="LabelingImageSelectController" id="tE9-xE-Ccr" customClass="LabelingImageSelectController" customModule="FireBaseMLDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c5C-oA-gc3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pqE-hv-okq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="nib-vx-FTX" customClass="LabelingSelectionCell" customModule="FireBaseMLDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nib-vx-FTX" id="Yut-Uf-xuG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzF-Pa-vMi">
+                                                    <rect key="frame" x="15" y="11" width="345" height="178"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fzF-Pa-vMi" firstAttribute="top" secondItem="Yut-Uf-xuG" secondAttribute="topMargin" id="OhM-nq-a3n"/>
+                                                <constraint firstItem="fzF-Pa-vMi" firstAttribute="bottom" secondItem="Yut-Uf-xuG" secondAttribute="bottomMargin" id="Qbd-sV-t03"/>
+                                                <constraint firstItem="fzF-Pa-vMi" firstAttribute="leading" secondItem="Yut-Uf-xuG" secondAttribute="leadingMargin" id="Yrd-sQ-RKj"/>
+                                                <constraint firstItem="fzF-Pa-vMi" firstAttribute="trailing" secondItem="Yut-Uf-xuG" secondAttribute="trailingMargin" id="rq6-uE-2ZY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageHolderView" destination="fzF-Pa-vMi" id="7Ko-tL-gEX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tE9-xE-Ccr" id="y8H-ia-kSL"/>
+                                    <outlet property="delegate" destination="tE9-xE-Ccr" id="qnc-e8-YF1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pqE-hv-okq" firstAttribute="leading" secondItem="8Zy-tR-FNK" secondAttribute="leading" id="81c-Jr-T7Q"/>
+                            <constraint firstItem="pqE-hv-okq" firstAttribute="top" secondItem="8Zy-tR-FNK" secondAttribute="top" id="Fja-iy-edB"/>
+                            <constraint firstItem="8Zy-tR-FNK" firstAttribute="trailing" secondItem="pqE-hv-okq" secondAttribute="trailing" id="NCO-xr-vGE"/>
+                            <constraint firstItem="8Zy-tR-FNK" firstAttribute="bottom" secondItem="pqE-hv-okq" secondAttribute="bottom" id="axn-VA-LWZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Zy-tR-FNK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Py-ZX-WkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978.39999999999998" y="-55.322338830584712"/>
+        </scene>
+    </scenes>
+</document>

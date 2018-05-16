@@ -11,6 +11,10 @@
 		3A20155620A83B1700AD1055 /* FaceDetectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20155520A83B1700AD1055 /* FaceDetectionController.swift */; };
 		3A20155820A85C7800AD1055 /* SelectImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20155720A85C7800AD1055 /* SelectImageController.swift */; };
 		3A20155A20A85D1900AD1055 /* SelectImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20155920A85D1900AD1055 /* SelectImageCell.swift */; };
+		3ADC12EC20AC309000F4DB02 /* ImageLabeling.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC12EB20AC309000F4DB02 /* ImageLabeling.storyboard */; };
+		3ADC12EE20AC30AB00F4DB02 /* ImageLabelingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC12ED20AC30AB00F4DB02 /* ImageLabelingController.swift */; };
+		3ADC12F020AC30CC00F4DB02 /* LabelingImageSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC12EF20AC30CC00F4DB02 /* LabelingImageSelectController.swift */; };
+		3ADC12F220AC311300F4DB02 /* LabelingSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC12F120AC311300F4DB02 /* LabelingSelectionCell.swift */; };
 		841B3EA020A42B30000CDA82 /* FBTextDetectionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B3E9F20A42B30000CDA82 /* FBTextDetectionClass.swift */; };
 		841C8BDE20A4099400863E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C8BDD20A4099400863E9E /* AppDelegate.swift */; };
 		841C8BE020A4099400863E9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C8BDF20A4099400863E9E /* ViewController.swift */; };
@@ -29,6 +33,10 @@
 		3A20155520A83B1700AD1055 /* FaceDetectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionController.swift; sourceTree = "<group>"; };
 		3A20155720A85C7800AD1055 /* SelectImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageController.swift; sourceTree = "<group>"; };
 		3A20155920A85D1900AD1055 /* SelectImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageCell.swift; sourceTree = "<group>"; };
+		3ADC12EB20AC309000F4DB02 /* ImageLabeling.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageLabeling.storyboard; sourceTree = "<group>"; };
+		3ADC12ED20AC30AB00F4DB02 /* ImageLabelingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelingController.swift; sourceTree = "<group>"; };
+		3ADC12EF20AC30CC00F4DB02 /* LabelingImageSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelingImageSelectController.swift; sourceTree = "<group>"; };
+		3ADC12F120AC311300F4DB02 /* LabelingSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelingSelectionCell.swift; sourceTree = "<group>"; };
 		841B3E9F20A42B30000CDA82 /* FBTextDetectionClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBTextDetectionClass.swift; sourceTree = "<group>"; };
 		841C8BDA20A4099400863E9E /* FireBaseMLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseMLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841C8BDD20A4099400863E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +77,17 @@
 			path = FaceDetection;
 			sourceTree = "<group>";
 		};
+		3ADC12EA20AC306900F4DB02 /* ImageLabeling */ = {
+			isa = PBXGroup;
+			children = (
+				3ADC12EB20AC309000F4DB02 /* ImageLabeling.storyboard */,
+				3ADC12ED20AC30AB00F4DB02 /* ImageLabelingController.swift */,
+				3ADC12EF20AC30CC00F4DB02 /* LabelingImageSelectController.swift */,
+				3ADC12F120AC311300F4DB02 /* LabelingSelectionCell.swift */,
+			);
+			path = ImageLabeling;
+			sourceTree = "<group>";
+		};
 		841C8BD120A4099400863E9E = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +109,7 @@
 		841C8BDC20A4099400863E9E /* FireBaseMLDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3ADC12EA20AC306900F4DB02 /* ImageLabeling */,
 				3A20151620A5F78700AD1055 /* FaceDetection */,
 				843A1C9420A576EA00309765 /* TextDetection */,
 				841C8BEF20A40BC400863E9E /* GoogleService-Info.plist */,
@@ -196,6 +216,7 @@
 				841C8BF020A40BC400863E9E /* GoogleService-Info.plist in Resources */,
 				3A20151820A5F7B600AD1055 /* FaceStoryBoard.storyboard in Resources */,
 				841C8BE520A4099600863E9E /* Assets.xcassets in Resources */,
+				3ADC12EC20AC309000F4DB02 /* ImageLabeling.storyboard in Resources */,
 				841C8BE320A4099400863E9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,10 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADC12F020AC30CC00F4DB02 /* LabelingImageSelectController.swift in Sources */,
 				3A20155A20A85D1900AD1055 /* SelectImageCell.swift in Sources */,
+				3ADC12EE20AC30AB00F4DB02 /* ImageLabelingController.swift in Sources */,
 				3A20155620A83B1700AD1055 /* FaceDetectionController.swift in Sources */,
 				841C8BE020A4099400863E9E /* ViewController.swift in Sources */,
 				841C8BDE20A4099400863E9E /* AppDelegate.swift in Sources */,
+				3ADC12F220AC311300F4DB02 /* LabelingSelectionCell.swift in Sources */,
 				843A1C9820A57C1800309765 /* ImageSelectionCell.swift in Sources */,
 				841C8BF220A4144B00863E9E /* SelectionCell.swift in Sources */,
 				3A20155820A85C7800AD1055 /* SelectImageController.swift in Sources */,
