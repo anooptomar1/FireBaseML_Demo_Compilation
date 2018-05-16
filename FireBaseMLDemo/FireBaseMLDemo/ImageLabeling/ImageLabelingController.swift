@@ -62,7 +62,7 @@ class ImageLabelingController: UIViewController {
     func setVisionImage(pImage:UIImage)
     {
         let metadata = VisionImageMetadata()
-        metadata.orientation = .rightTop
+        metadata.orientation = .topLeft
         visionImage = VisionImage(image: pImage)
         visionImage?.metadata = metadata
     }
