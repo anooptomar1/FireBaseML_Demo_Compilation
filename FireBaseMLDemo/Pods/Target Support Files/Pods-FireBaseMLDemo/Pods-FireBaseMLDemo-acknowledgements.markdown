@@ -231,6 +231,10 @@ Copyright 2018 Google
 
 Copyright 2018 Google
 
+## FirebaseMLVisionLabelModel
+
+Copyright 2018 Google
+
 ## FirebaseMLVisionTextModel
 
 Copyright 2018 Google
