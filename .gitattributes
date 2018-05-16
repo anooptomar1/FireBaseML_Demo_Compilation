@@ -1,0 +1,2 @@
+FireBaseMLDemo/Pods/GoogleMobileVision/FaceDetector/Frameworks/FaceDetector.framework/FaceDetector filter=lfs diff=lfs merge=lfs -text
+FireBaseMLDemo/Pods/GoogleMobileVision/TextDetector/Frameworks/TextDetector.framework/TextDetector filter=lfs diff=lfs merge=lfs -text
