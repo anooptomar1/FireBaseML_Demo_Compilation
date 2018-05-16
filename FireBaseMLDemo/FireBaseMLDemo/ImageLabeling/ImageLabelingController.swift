@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseMLVision
 
 class ImageLabelingController: UIViewController {
 
@@ -15,10 +16,14 @@ class ImageLabelingController: UIViewController {
     @IBOutlet weak var detectImageButton: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
     
+    var options:VisionLabelDetectorOptions?
+    var visionImage:VisionImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setLabelConfidence()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,8 +51,50 @@ class ImageLabelingController: UIViewController {
         detectImageButton.layer.cornerRadius = detectImageButton.frame.height/2
         detectImageButton.clipsToBounds = true
     }
-
-   
+    
+    func setLabelConfidence()
+    {
+         options = VisionLabelDetectorOptions(
+            confidenceThreshold: 0.5
+        )
+    }
+    
+    func setVisionImage(pImage:UIImage)
+    {
+        let metadata = VisionImageMetadata()
+        metadata.orientation = .rightTop
+        visionImage = VisionImage(image: pImage)
+        visionImage?.metadata = metadata
+    }
+    
+    func getImageLabels()
+    {
+        let vision = Vision.vision()
+        let labelDetector = vision.labelDetector(options: options!)
+        labelDetector.detect(in: visionImage!) { (labels, error) in
+            guard error == nil, let labels = labels, !labels.isEmpty else
+            {
+                let alert =  UIAlertController.init(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                let alertAction = UIAlertAction.init(title: "Ok", style: .default, handler:
+                { (_) in
+                    alert.dismiss(animated: true, completion: nil)
+                })
+                alert.addAction(alertAction)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            var labelArray:[String] = [String]()
+            for label in labels {
+                let labelText = label.label
+                let entityId = label.entityID
+                let confidence = label.confidence
+                labelArray.append("\(labelText) with conficence of \(confidence)\n")
+                print(entityId)
+            }
+            self.resultLabel.text = labelArray.joined()
+        }
+    }
     
     @IBAction func selectImageAction(_ sender: UIButton)
     {
@@ -56,7 +103,7 @@ class ImageLabelingController: UIViewController {
     
     @IBAction func detectImageLabel(_ sender: UIButton)
     {
-        
+        getImageLabels()
     }
     
     @IBAction func imageSelectionAction(_ sender: Any)
@@ -76,7 +123,7 @@ extension ImageLabelingController:ImageSelectionProtocal
 {
     func SelectedImage(image:UIImage , metadata:Metadata)
     {
-        //setFaceDetector(with: image)
+        setVisionImage(pImage: image)
         imageHolderView.image = image
     }
 }
