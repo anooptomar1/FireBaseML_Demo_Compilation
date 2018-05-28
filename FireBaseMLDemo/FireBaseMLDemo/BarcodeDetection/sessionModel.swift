@@ -50,7 +50,7 @@ class sessionModel: NSObject {
     
     func setPreviewLayer(forRect frame:CGRect)
     {
-        self.previewLayer = AVCaptureVideoPreviewLayer.init()
+        self.previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.previewLayer.frame = frame
         self.previewLayer.videoGravity = .resizeAspectFill
     }
