@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A181AFE20B4219300E11491 /* BarcodeDetection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A181AFD20B4219300E11491 /* BarcodeDetection.storyboard */; };
+		3A181B0020B421C900E11491 /* BarcodeDetectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A181AFF20B421C900E11491 /* BarcodeDetectionController.swift */; };
 		3A20151820A5F7B600AD1055 /* FaceStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A20151720A5F7B600AD1055 /* FaceStoryBoard.storyboard */; };
 		3A20155620A83B1700AD1055 /* FaceDetectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20155520A83B1700AD1055 /* FaceDetectionController.swift */; };
 		3A20155820A85C7800AD1055 /* SelectImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20155720A85C7800AD1055 /* SelectImageController.swift */; };
 		3A20155A20A85D1900AD1055 /* SelectImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20155920A85D1900AD1055 /* SelectImageCell.swift */; };
+		3A23BEB420BC5B0000059761 /* sessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23BEB320BC5B0000059761 /* sessionModel.swift */; };
 		3ADC12EC20AC309000F4DB02 /* ImageLabeling.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC12EB20AC309000F4DB02 /* ImageLabeling.storyboard */; };
 		3ADC12EE20AC30AB00F4DB02 /* ImageLabelingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC12ED20AC30AB00F4DB02 /* ImageLabelingController.swift */; };
 		3ADC12F020AC30CC00F4DB02 /* LabelingImageSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC12EF20AC30CC00F4DB02 /* LabelingImageSelectController.swift */; };
@@ -29,10 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A181AFD20B4219300E11491 /* BarcodeDetection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarcodeDetection.storyboard; sourceTree = "<group>"; };
+		3A181AFF20B421C900E11491 /* BarcodeDetectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeDetectionController.swift; sourceTree = "<group>"; };
 		3A20151720A5F7B600AD1055 /* FaceStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FaceStoryBoard.storyboard; sourceTree = "<group>"; };
 		3A20155520A83B1700AD1055 /* FaceDetectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionController.swift; sourceTree = "<group>"; };
 		3A20155720A85C7800AD1055 /* SelectImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageController.swift; sourceTree = "<group>"; };
 		3A20155920A85D1900AD1055 /* SelectImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageCell.swift; sourceTree = "<group>"; };
+		3A23BEB320BC5B0000059761 /* sessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sessionModel.swift; sourceTree = "<group>"; };
 		3ADC12EB20AC309000F4DB02 /* ImageLabeling.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageLabeling.storyboard; sourceTree = "<group>"; };
 		3ADC12ED20AC30AB00F4DB02 /* ImageLabelingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelingController.swift; sourceTree = "<group>"; };
 		3ADC12EF20AC30CC00F4DB02 /* LabelingImageSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelingImageSelectController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A181AFC20B4217B00E11491 /* BarcodeDetection */ = {
+			isa = PBXGroup;
+			children = (
+				3A181AFD20B4219300E11491 /* BarcodeDetection.storyboard */,
+				3A181AFF20B421C900E11491 /* BarcodeDetectionController.swift */,
+				3A23BEB320BC5B0000059761 /* sessionModel.swift */,
+			);
+			path = BarcodeDetection;
+			sourceTree = "<group>";
+		};
 		3A20151620A5F78700AD1055 /* FaceDetection */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +125,7 @@
 		841C8BDC20A4099400863E9E /* FireBaseMLDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3A181AFC20B4217B00E11491 /* BarcodeDetection */,
 				3ADC12EA20AC306900F4DB02 /* ImageLabeling */,
 				3A20151620A5F78700AD1055 /* FaceDetection */,
 				843A1C9420A576EA00309765 /* TextDetection */,
@@ -217,6 +234,7 @@
 				3A20151820A5F7B600AD1055 /* FaceStoryBoard.storyboard in Resources */,
 				841C8BE520A4099600863E9E /* Assets.xcassets in Resources */,
 				3ADC12EC20AC309000F4DB02 /* ImageLabeling.storyboard in Resources */,
+				3A181AFE20B4219300E11491 /* BarcodeDetection.storyboard in Resources */,
 				841C8BE320A4099400863E9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A181B0020B421C900E11491 /* BarcodeDetectionController.swift in Sources */,
 				3ADC12F020AC30CC00F4DB02 /* LabelingImageSelectController.swift in Sources */,
+				3A23BEB420BC5B0000059761 /* sessionModel.swift in Sources */,
 				3A20155A20A85D1900AD1055 /* SelectImageCell.swift in Sources */,
 				3ADC12EE20AC30AB00F4DB02 /* ImageLabelingController.swift in Sources */,
 				3A20155620A83B1700AD1055 /* FaceDetectionController.swift in Sources */,

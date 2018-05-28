@@ -13,5 +13,6 @@ pod 'Firebase/MLVision'
 pod 'Firebase/MLVisionTextModel'
 pod 'Firebase/MLVisionFaceModel'
 pod 'Firebase/MLVisionLabelModel'
+pod 'Firebase/MLVisionBarcodeModel'
 
 end

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Barcode Detection Controller-->
+        <scene sceneID="u84-rr-trH">
+            <objects>
+                <viewController storyboardIdentifier="BarcodeDetectionController" id="3F9-gK-0oN" customClass="BarcodeDetectionController" customModule="FireBaseMLDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yVR-gx-OwG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdV-zC-GFp">
+                                <rect key="frame" x="16" y="20" width="343" height="254"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="254" id="Vau-8E-TPK"/>
+                                    <constraint firstAttribute="width" constant="343" id="lNo-mC-xbF"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3M7-ej-xUH">
+                                <rect key="frame" x="16" y="290" width="343" height="357"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3M7-ej-xUH" firstAttribute="top" secondItem="KdV-zC-GFp" secondAttribute="bottom" constant="16" id="1cB-CO-yyQ"/>
+                            <constraint firstItem="I4M-t8-2SO" firstAttribute="bottom" secondItem="3M7-ej-xUH" secondAttribute="bottom" constant="20" id="7SZ-WJ-QkU"/>
+                            <constraint firstItem="KdV-zC-GFp" firstAttribute="leading" secondItem="I4M-t8-2SO" secondAttribute="leading" constant="16" id="Bbg-ch-4C0"/>
+                            <constraint firstItem="I4M-t8-2SO" firstAttribute="trailing" secondItem="3M7-ej-xUH" secondAttribute="trailing" constant="16" id="Ss0-gp-LOs"/>
+                            <constraint firstItem="KdV-zC-GFp" firstAttribute="leading" secondItem="I4M-t8-2SO" secondAttribute="leading" constant="16" id="aay-Kj-nh4"/>
+                            <constraint firstItem="3M7-ej-xUH" firstAttribute="leading" secondItem="I4M-t8-2SO" secondAttribute="leading" constant="16" id="fUd-v2-fWy"/>
+                            <constraint firstItem="I4M-t8-2SO" firstAttribute="trailing" secondItem="KdV-zC-GFp" secondAttribute="trailing" constant="16" id="tRk-gI-ByC"/>
+                            <constraint firstItem="KdV-zC-GFp" firstAttribute="top" secondItem="I4M-t8-2SO" secondAttribute="top" id="zvd-Yr-fGd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I4M-t8-2SO"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="KdV-zC-GFp" id="LxH-jJ-C1X"/>
+                        <outlet property="resultLabel" destination="3M7-ej-xUH" id="We1-hE-PQw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11y-I7-Huy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272.80000000000001" y="180.35982008995504"/>
+        </scene>
+    </scenes>
+</document>
