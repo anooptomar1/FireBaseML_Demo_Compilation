@@ -51,6 +51,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource
         let faceStoryBoard = UIStoryboard.init(name: "FaceStoryBoard", bundle: nil)
         let labelingStoryBoard = UIStoryboard.init(name: "ImageLabeling", bundle: nil)
         let barcodeStoryBoard = UIStoryboard.init(name: "BarcodeDetection", bundle: nil)
+        let landMarkStoryBoard = UIStoryboard.init(name: "LandmarkDetection", bundle: nil)
         
         switch indexPath.row
         {
@@ -65,6 +66,9 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource
             self.navigationController?.pushViewController(Vc, animated: true)
         case 3:
             let Vc = labelingStoryBoard.instantiateViewController(withIdentifier: "ImageLabelingController") as! ImageLabelingController
+            self.navigationController?.pushViewController(Vc, animated: true)
+        case 4:
+            let Vc = landMarkStoryBoard.instantiateViewController(withIdentifier: "LandmarkDetectionViewController") as! LandmarkDetectionViewController
             self.navigationController?.pushViewController(Vc, animated: true)
         default:
             return

@@ -23,19 +23,33 @@ class sessionModel: NSObject {
     }
     
     
-    func addOutPut()
+    func addOutPut(forController controller:UIViewController)
     {
         self.captureSession.beginConfiguration() // 1
         let captureDevice = AVCaptureDevice.default(for: .video)
-        let deviceInput = try? AVCaptureDeviceInput.init(device: captureDevice!)
+        guard let lcaptureDevice = captureDevice else
+        {
+            let alert = UIAlertController.init(title: "This is bad", message: "because its not real device", preferredStyle: .alert)
+            let alerAction = UIAlertAction.init(title: "OK", style: .cancel, handler: {(UIAlertAction) in
+                alert.dismiss(animated: true, completion: nil)
+                controller.navigationController?.popViewController(animated: true)
+            })
+            alert.addAction(alerAction)
+            controller.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        let deviceInput = try? AVCaptureDeviceInput.init(device: lcaptureDevice)
         if (deviceInput == nil)
         {
             
-            let alert = UIAlertController.init(title: "This Sucks", message: "because its not real device", preferredStyle: .alert)
-            let alerAction = UIAlertAction.init(title: "Ya,I am Dick", style: .cancel, handler: {(UIAlertAction) in
+            let alert = UIAlertController.init(title: "This is bad", message: "because its not real device", preferredStyle: .alert)
+            let alerAction = UIAlertAction.init(title: "OK", style: .cancel, handler: {(UIAlertAction) in
                 alert.dismiss(animated: true, completion: nil)
+                controller.navigationController?.popViewController(animated: true)
             })
             alert.addAction(alerAction)
+            controller.present(alert, animated: true, completion: nil)
         }
         else
         {
@@ -46,6 +60,8 @@ class sessionModel: NSObject {
         self.captureSession.addOutput(self.outputData)
         self.outputData.videoSettings = [((kCVPixelBufferPixelFormatTypeKey as NSString) as String): NSNumber(value: kCVPixelFormatType_420YpCbCr8BiPlanarFullRange as UInt32)]
         self.captureSession.commitConfiguration()
+        
+         self.captureSession.startRunning()
     }
     
     func setPreviewLayer(forRect frame:CGRect)

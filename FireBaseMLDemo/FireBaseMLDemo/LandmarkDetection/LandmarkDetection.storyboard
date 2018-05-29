@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Landmark Detection View Controller-->
+        <scene sceneID="VaM-d2-WLs">
+            <objects>
+                <viewController storyboardIdentifier="LandmarkDetectionViewController" id="abc-io-cAs" customClass="LandmarkDetectionViewController" customModule="FireBaseMLDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iGY-CU-bus">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAq-uI-wQp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <string key="text">Currently Google FireBase doesnt support on device LandMark model, Will update soon when its support.
+
+(FYI On cloud using GoogleVision cost too damn much for free demo)</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.28490950835789575" green="0.85456263793467269" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iAq-uI-wQp" firstAttribute="leading" secondItem="YRU-lq-knP" secondAttribute="leading" id="W3t-hs-2vB"/>
+                            <constraint firstItem="iAq-uI-wQp" firstAttribute="top" secondItem="YRU-lq-knP" secondAttribute="top" id="ihc-CY-8N4"/>
+                            <constraint firstItem="YRU-lq-knP" firstAttribute="bottom" secondItem="iAq-uI-wQp" secondAttribute="bottom" id="kJV-JZ-OOv"/>
+                            <constraint firstItem="YRU-lq-knP" firstAttribute="trailing" secondItem="iAq-uI-wQp" secondAttribute="trailing" id="mvc-Mn-LBb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YRU-lq-knP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eu0-JL-NQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98" y="147"/>
+        </scene>
+    </scenes>
+</document>

@@ -27,8 +27,7 @@ class BarcodeDetectionController: UIViewController {
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
         session = sessionModel.init(session: captureSession)
         session?.setPreviewLayer(forRect: previewView.bounds)
-        session?.addOutPut()
-        session?.captureSession.startRunning()
+        session?.addOutPut(forController: self)
         session?.outputData.setSampleBufferDelegate(self , queue: DispatchQueue.global(qos: DispatchQoS.QoSClass.default))
         session?.previewLayer.bounds = previewView.layer.frame
         previewView.layer.addSublayer((session?.previewLayer)!)
